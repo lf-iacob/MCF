@@ -56,6 +56,7 @@ plt.show()
 #Grafico istogramma per dati precedenti di massa
 n, bis, p = plt.hist(np.log10(eso1m), bins=50, range=(-4, 4), color='gold', alpha=0.3)
 n, bis, p = plt.hist(np.log10(eso2m), bins=50, range=(-2, 2), color='red', alpha=0.3)
-plt.xlabel('valore estratto ', fontsize=16)
+plt.title('Istogramma')
+plt.xlabel('Valori estratti', fontsize=16)
 plt.legend()
 plt.show()
