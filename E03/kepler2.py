@@ -54,10 +54,8 @@ plt.title('3. Andamento della massa dipendentemente dal periodo orbitale, selezo
 plt.show()
 
 #Grafico istogramma per dati precedenti di massa
-n, bis, p = plt.hist(eso1m, bins=100, range=(0, 400), color='gold', alpha=0.3)
-n, bis, p = plt.hist(eso2m, bins=100, range=(0, 400), color='red', alpha=0.3)
+n, bis, p = plt.hist(np.log10(eso1m), bins=50, range=(-4, 4), color='gold', alpha=0.3)
+n, bis, p = plt.hist(np.log10(eso2m), bins=50, range=(-2, 2), color='red', alpha=0.3)
 plt.xlabel('valore estratto ', fontsize=16)
-plt.xscale('log')
-plt.yscale('log')
 plt.legend()
 plt.show()
