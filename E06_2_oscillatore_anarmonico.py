@@ -7,46 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1ckWkJQzChtmlbtUJUmPX6cQop4awvrIo
 
 #MCF_E06: Integrazione e Derivazione
-"""
-
-# Import
-import numpy as np
-import pandas as pd
-import scipy as sp
-from scipy import integrate
-import matplotlib.pyplot as plt
-
-"""##1_legge_oraria.py"""
-
-#estrazione dati
-tab=pd.read_csv('https://raw.githubusercontent.com/s-germani/metodi-computazionali-fisica-2024/refs/heads/main/dati/integrazione_derivazione/vel_vs_time.csv')
-t=tab['t']
-v=tab['v']
-print(tab)
-
-#grafico velocita
-plt.figure()
-plt.plot(t, v, color='teal')
-plt.title('Andamento della velocità')
-plt.xlabel('Tempo [s]')
-plt.ylabel('Velocità [m/s]')
-plt.grid()
-plt.show()
-
-#integrazione
-simp=np.empty(0)
-for i in range(1, len(v)+1):
-  integ=integrate.simpson(v[0:i], t[0:i])
-  simp=np.append(simp, integ)
-
-#grafico legge oraria
-plt.figure()
-plt.plot(t, simp, color='orchid')
-plt.title('Legge oraria')
-plt.ylabel('Legge oraria [m]')
-plt.xlabel('Tempo [s]')
-plt.grid()
-plt.show()
 
 """##2_oscillatore_anarmonico.py"""
 
@@ -193,61 +153,6 @@ plt.ylabel('Periodo di oscillazione [s]')
 plt.legend()
 plt.grid()
 plt.show()
-
-"""##3_oscilloscopio.py"""
-
-#Estrazione dei dati csv
-tab=pd.read_csv('https://raw.githubusercontent.com/s-germani/metodi-computazionali-fisica-2024/refs/heads/main/dati/integrazione_derivazione/oscilloscope.csv')
-print(tab)
-
-t=tab['time']
-s1=tab['signal1']
-s2=tab['signal2']
-
-#grafico dei segnali
-plt.figure(figsize=(12,5))
-plt.title("Segnali dell'oscilloscopio")
-plt.plot(t, s1, color='cornflowerblue', label='Segnale 1')
-plt.plot(t, s2, color='hotpink', label='Segnale 2')
-plt.xlabel('Tempo [s]')
-plt.ylabel('Volt [V]')
-plt.legend()
-plt.grid()
-plt.show()
-
-#DERIVATA con metodo della Differenza Centrale (con DATI RUMOROSI)
-def derivata(x, y, n):
-  ris=np.empty(0)
-  new_x=np.empty(0)
-  for i in range(int(n/2), int(len(t)-1-n/2), n):
-    ris=np.append(ris, (y[i+n/2]-y[i-n/2])/(x[i+n/2]-x[i-n/2]))
-    new_x=np.append(new_x, x[i])
-  return new_x, ris
-
-#Calcolo le derivate dei due segnali ruomorosi dell'oscilloscopio
-t1, ds1=derivata(t, s1, 4)
-t2, ds2=derivata(t, s2, 4)
-
-#grafico le derivate dei segnali
-plt.figure(figsize=(12,5))
-plt.title("Derivate dei segnali dell'oscilloscopio: n=4")
-plt.plot(t1, ds1, color='cornflowerblue', label='Segnale 1')
-plt.plot(t2, ds2, color='hotpink', label='Segnale 2')
-plt.xlabel('Tempo [s]')
-plt.ylabel('Volt/tempo [$dV/dt$]')
-plt.legend()
-plt.grid()
-plt.show()
-
-#Calcolo le derivate dei due segnali ruomorosi dell'oscilloscopio
-t1, ds1=derivata(t, s1, 50)
-t2, ds2=derivata(t, s2, 50)
-
-#grafico le derivate dei segnali
-plt.figure(figsize=(12,5))
-plt.title("Derivate dei segnali dell'oscilloscopio: n=50")
-plt.plot(t1, ds1, color='cornflowerblue', label='Segnale 1')
-plt.plot(t2, ds2, color='hotpink', label='Segnale 2')
 plt.xlabel('Tempo [s]')
 plt.ylabel('Volt/tempo [$dV/dt$]')
 plt.legend()
