@@ -22,7 +22,7 @@ P=np.empty((5, 1000))
 D=np.empty((5, 1000))
 for i in range(0, 5):
     x,y, p, d=pp.rw2d_sim(step, 1000)
-    for j in range(1, 1000):
+    for j in range(0, 1000):
         X[i][j]= x[j]
         Y[i][j]= y[j]
         P[i][j]= p[j]
@@ -42,7 +42,7 @@ X1=np.empty((100, 10))
 Y1=np.empty((100, 10))
 for i in range(0, 100):
     x1,y1, p1, d1=pp.rw2d_sim(step, 10)
-    for j in range(1, 10):
+    for j in range(0, 10):
         X1[i][j]= x1[j]
         Y1[i][j]= y1[j]
 
@@ -50,7 +50,7 @@ X2=np.empty((100, 100))
 Y2=np.empty((100, 100))
 for i in range(0, 100):
     x2,y2, p2, d2=pp.rw2d_sim(step, 100)
-    for j in range(1, 100):
+    for j in range(0, 100):
         X2[i][j]= x2[j]
         Y2[i][j]= y2[j]
 
@@ -58,7 +58,7 @@ X3=np.empty((100, 1000))
 Y3=np.empty((100, 1000))
 for i in range(0, 100):
     x3,y3, p3, d3=pp.rw2d_sim(step, 1000)
-    for j in range(1, 1000):
+    for j in range(0, 1000):
         X3[i][j]= x3[j]
         Y3[i][j]= y3[j]
 
