@@ -1,3 +1,6 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
 def f_sin(x):
   return (1/4)*np.sin(x/2)
 
