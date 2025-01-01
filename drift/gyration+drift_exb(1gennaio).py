@@ -185,6 +185,7 @@ def em_exb(E, B, q, m, v0_x, v0_y, v0_z, N):
     plt.title('v_ortogonale (t)')
     plt.xlabel('vx (m/s)')
     plt.ylabel('vy (m/s)')
+    plt.axis('equal')
     plt.show()
     print('Velocità: andamento nel tempo')
     fig, ax=plt.subplots(1, 3, figsize=(15,6))
@@ -217,6 +218,8 @@ def em_exb(E, B, q, m, v0_x, v0_y, v0_z, N):
     ax.scatter(vx, vy, vz, marker='.', c=vz, cmap='plasma', label='Drift ExB')
     ax.scatter(vx, vy_g, vz, marker='.', c=vz, cmap='viridis', label='Gyration')
     ax.legend()
+    ax.set_aspect('equal')
+    ax.set_zlim(min(vz), max(vz))
     plt.show()
 
     #TO CHECK THE POSITION
@@ -229,6 +232,7 @@ def em_exb(E, B, q, m, v0_x, v0_y, v0_z, N):
     plt.title('Traiettoria ortogonale (t)')
     plt.xlabel('x (m/s)')
     plt.ylabel('y (m/s)')
+    plt.axis('equal')
     plt.show()
     print('Leggi orarie')
     fig, ax=plt.subplots(1, 3, figsize=(15,6))
@@ -262,6 +266,8 @@ def em_exb(E, B, q, m, v0_x, v0_y, v0_z, N):
     ax.plot(x, y, z, color='black', lw=0.7, label='Drift ExB')
     ax.scatter(x, y_g, z, c=time, cmap='viridis', label='Gyration')
     ax.plot(x, y_g, z, color='orange', lw=0.7, label='Gyration')
+    ax.set_aspect('equal', adjustable='box')
+    ax.set_zlim(min(z), max(z))
     ax.legend()
     plt.show()
     
