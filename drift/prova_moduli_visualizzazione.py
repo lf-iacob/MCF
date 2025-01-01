@@ -22,7 +22,7 @@ METTI IN ORDINE TUTTO, IN BASE ALLE SUE RICHIESTE
 q=-1.602*10**(-19) #C
 m=9.1093837015*10**(-31) #kg
 B=0.0015 #T (AMS-02, secondo wikipedia)
-E=60 #N/C (numero completamente a caso)
+E=6000 #N/C (numero completamente a caso)
 v0_x=2*10**5
 v0_y=5*10**5 #m/s (a caso, se mai "vicino" alla velocità della luce)
 v0_z=1
