@@ -270,6 +270,11 @@ def em_exb(E, B, q, m, v0_x, v0_y, v0_z, N):
     ax.set_zlim(min(z), max(z))
     ax.legend()
     plt.show()
+
+    print('VELOCITÀ INIZIALI')
+    print('Impostate da esterno: ({:}, {:}, {:})'.format(v0_x, v0_y, v0_z))
+    print('Gyration: ({:}, {:}, {:})'.format(vx[0], vy_g[0], vz[0]))
+    print('Drift: ({:}, {:}, {:})'.format(vx[0], vy[0], vz[0]))
     
     print('Sono stati compiuti {:} step'.format(N))
     step=np.array([x,y,z])
