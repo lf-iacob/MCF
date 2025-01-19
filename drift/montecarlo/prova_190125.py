@@ -272,3 +272,15 @@ plt.ylabel('Valori estratti', fontsize=16)
 plt.xlabel('Bins', fontsize=16)
 plt.show()
 
+
+
+
+
+
+''' COMMENTO: PROBLEMI DA RISOLVERE
+- Dove devo mettere il t che scandisce il tempo che intercorre per ogni passo compiuto (serve sia in modulo che in script)?
+-(!) Il valore medio di velocità rappresentante la deriva è il modulo della velocità ortogonale, giusto? (Sarebbe da interpretare la componente vx che genera spostamento)
+-(!!) Istogrammi con forme strane: scegliere un binnaggio adatto con formula generica, perchè non torna in base a particelle/numero di passi?
+-(!!!) Quali forze devo scrivere per implementare la traiettoria con il gradiente?
+DA PROVARE A FARE ANCORA
+- Cambiare il valore di E,B in diverse configurazioni, come richiesto. '''
