@@ -1,0 +1,3 @@
+La repository in questione contiene il modulo e lo script che permettono la simulazione del moto di una particella carica, in particolare l'elettrone, inserito all'interno di una regione di spazio popolata da campi.
+In particolare, nel primo caso ci sono un campo magnetico ed un campo elettrico uniformi, costanti ed ortogonali tra loro: E lungo x e B lungo z. Risolvendo le equazioni differenziali, si osserva come la carica è soggetta ad un moto di deriva EXB lungo la direzione y.
+Nel secondo esempio, è presente un solo campo magnetico costante nel tempo in direzione z, ma dotato di un gradiente ortogonale lungo y che lo rende non uniforme. I risultati teorici mostrano che le particelle in media sono sottoposte ad un drift BXgradB su x.
