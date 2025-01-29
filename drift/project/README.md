@@ -13,7 +13,3 @@ Nella simulazione vengono impostate dall'interno le cartteristiche specifiche de
 L'utente può scegliere quante particelle generare nella simulazione e quanti passi queste hanno compiuto (quindi la durata della simulazione, dove il tempo infinitesimo associato a ciascuno step è fissato dall'interno coerentemente con gli ordini di grandezza delle variabili in gioco).
 
 Si visualizzano di conseguenza per entrambe le tipologie di drift la traiettoria compiuta da una singola carica a mo' di esempio e poi quelle delle varie particelle generate. Per ognuna delle tre configurazioni di campo proposte si mostra la direzione del vettore rappresentante la velocità media di drift nello spazio tridimensionale e la sua proiezione sul piano xy ortogonale. Infine, vengono mostrati gli istogrammi per la proiezione del drift sull'asse x, asse y e piano xy per lo studio statistico della deriva della particella.
-
----
-
-Simulazione
